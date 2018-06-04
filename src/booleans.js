@@ -11,48 +11,53 @@ const either = (a, b) => {
 };
 
 const none = (a, b) => {
- return (!a && !b);
+ return  (!a && !b) 
 };
 
 const one = (a, b) => {
-  return (!a && b) || (!b && a);
+return (!a && b) || (!b && a)  
 };
 
 const truthiness = (a) => {
-  return !!(a);
+return !!(a)  
 };
 
 const isEqual = (a, b) => {
-  return (a === b);
+return (a === b);  
 };
 
 const isGreaterThan = (a, b) => {
-  return (a > b);
+return (a > b)  
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  return (a <= b);
+return (a <= b)  
 };
 
 const isOdd = (a) => {
-  return (a % 2 !== 0) ;
+return (a%2 !== 0)  
 };
 
 const isEven = (a) => {
- return (a % 2 === 0);
+return (a%2 == 0)
 };
 
 const isSquare = (a) => {
-return Math.sqrt(a) % 1 === 0;
+return (Math.sqrt(a) %1 === 0)
 };
 
 const startsWith = (char, string) => {
-  return string.substr(0, 1) === char;
+return (string.substr(0,1) === char)  
 };
 
 const containsVowels = (string) => {
-  
+const m = string.match(/[aeiou]/gi)
+if (m === null) {
+return false }  
+else {
+return true
 };
+}
 
 const isLowerCase = (string) => {
   return string.toLowerCase() === string;
