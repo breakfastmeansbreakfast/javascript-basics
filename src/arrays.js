@@ -11,15 +11,17 @@ const csvStringToArray = (string) => {
 };
 
 const addToArray = (element, array) => {
-   array.push(element);
+array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+array.splice(index, 1)
+return array
+
 };
 
 const numbersToStrings = (numbers) => {
