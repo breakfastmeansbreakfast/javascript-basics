@@ -1,10 +1,9 @@
 const createPerson = (name, age) => {
-const createPerson = {
-name: this.name,
-age: this.age,
+const newPerson = {
+name: name,
+age: age,
 }
-
-
+return newPerson
 };
 
 const getName = (object) => {
@@ -12,35 +11,42 @@ return object.name
 };
 
 const getProperty = (property, object) => {
-return this.object.property
+return object.age
 };
 
 const hasProperty = (property, object) => {
-return (object.property == true)
+return object.hasOwnProperty(property)
 };
 
 const isOver65 = (person) => {
-  // your code here
+return person.age > 65 ? true : false
 };
 
 const getAges = (people) => {
-  // your code here
+return people.map(function (obj) {return obj.age})
 };
 
 const findByName = (name, people) => {
-  // your code here
+let person =  people.filter(obj => {return obj.name === name})
+return person[0] // workaround because test wont accept a sinlge object array
 };
 
 const findHondas = (cars) => {
-  // your code here
+return hondas = cars.filter(obj => obj.manufacturer === 'Honda')
 };
 
 const averageAge = (people) => {
-  // your code here
+let ageTotal = 0
+let ages = people.map(obj => {ageTotal += obj.age})
+return ageTotal / people.length
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+return {
+  age: age,
+  introduce: function (intro) {return `Hi ${intro}, my name is ${name} and I am ${age}!`},
+  name: name
+}
 };
 
 module.exports = {

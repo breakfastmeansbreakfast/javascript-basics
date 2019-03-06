@@ -27,5 +27,7 @@
       "^.+\\.js?$": "babel-jest"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "jest-cli": "^24.1.0"
+  }
 }
